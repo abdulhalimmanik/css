@@ -1,0 +1,61 @@
+Child Selectors
+	Descendant Selector
+	article h2 {...}
+	Direct Child Selector
+	article > p {...}
+Sibling Selectors
+	General Sibling Selector
+	h2 ~ p {...}
+	Adjacent Sibling Selector
+	h2 + p {...}
+
+Attribute Selectors
+	a[target] Attribute Present Selector
+	a[href="http://google.com/"] Attribute Equals Selector
+	a[href*="login"] Attribute Contains Selector
+	a[href^="https://"] Attribute Begins With Selector
+	a[href$=".pdf"] Attribute Ends With Selector
+	a[rel~="tag"] Attribute Spaced Selector
+	a[lang|="en"] Attribute Hyphenated Selector
+Pseudo-classes
+	a:link {...}
+	a:visited {...}
+	a:hover {...}
+	a:active {...}
+	a:focus {...}
+	input:enabled {...}
+	input:disabled {...}
+	input:checked {...}
+	input:indeterminate {...}
+
+	li:first-child {...}
+	li:last-child {...}
+	div:only-child {...}
+	p:first-of-type {...}
+	p:last-of-type {...}
+	img:only-of-type {...}
+	li:nth-child(3n) {...}
+	li:nth-child(2n+3) {...}
+	li:nth-child(-n+4) {...}
+	li:nth-child(-2n+5) {...}
+	li:nth-last-child(3n+2) {...}
+	p:nth-of-type(3n) {...}
+	p:nth-last-of-type(2n+1) {...}
+	section:target {...}
+	div:empty {...}
+	.alpha:first-letter,
+	.bravo:first-line {
+	  color: #ff7b29;
+	  font-size: 18px;
+	}
+	a:after {
+	  color: #9799a7;
+	  content: " (" attr(href) ")";
+	  font-size: 11px;
+	}
+	::-moz-selection {
+	    background: #ff7b29;
+	}
+	::selection {
+	  background: #ff7b29;
+	}

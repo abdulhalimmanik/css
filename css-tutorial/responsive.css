@@ -1,0 +1,60 @@
+/* 	> 1240																													> 1240 */
+
+@media only screen and (min-width: 1240px){
+	
+}
+
+/* 	#Header Creative always Open	1240 - 1489											#Header Creative always Open	1240 - 1489 */
+
+@media only screen and (min-width: 1240px) and (max-width: 1489px){
+	
+}	
+	
+/* 	< 1240																													< 1240 */
+
+@media only screen and (max-width: 1239px){
+	
+}	
+
+/* 	#Desktop	960 - 1239																					#Desktop	960 - 1239 */
+
+@media only screen and (min-width: 960px) and (max-width: 1239px){
+
+}	
+
+/* 	#Desktop	> 960																							#Desktop	> 960 */
+
+@media only screen and (min-width: 960px)
+{	
+	.hide-desktop { display:none !important;}
+}
+
+/* 	#Tablet (Landscape)		768 - 959															#Tablet (Landscape)		768 - 959 */
+
+@media only screen and (min-width: 768px) and (max-width: 959px){
+	
+}	
+	
+/* 	#Desktop & Tablet (Landscape)	> 768													#Desktop & Tablet (Landscape)	> 768 */
+
+@media only screen and (min-width: 768px){
+
+}
+/* 	#Tablet (Portrait) & Mobile		< 768													#Tablet (Portrait) & Mobile		< 768 */
+
+@media only screen and (max-width: 767px) {
+
+}	
+
+/* 	#Tablet (Portrait) & Mobile	(Landscape)	< 768									#Tablet (Portrait) & Mobile	(Landscape)	< 768 */
+
+@media only screen and (min-width: 480px) and (max-width: 767px){
+
+}
+
+
+/* 	#Mobile (Portrait)	< 480																			#Mobile (Portrait)	< 480 */
+
+@media only screen and (max-width: 479px){
+
+}

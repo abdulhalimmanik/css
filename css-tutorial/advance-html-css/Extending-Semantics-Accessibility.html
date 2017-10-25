@@ -1,0 +1,124 @@
+Semantic Motivation
+Structural Semantics
+Hiding Content
+	<!-- Good -->
+	<div hidden>...</div>
+
+	<!-- Not good -->
+	<div style="display: none;">...</div>
+Text Level Semantics
+Bolding Text
+	<!-- Strong importance -->
+	<strong>Caution:</strong> Falling rocks.
+
+	<!-- Stylistically offset -->
+	This recipe calls for <b>bacon</b> and <b>baconnaise</b>.
+Italicizing Text
+	<!-- Stressed emphasis -->
+	I <em>love</em> Chicago!
+
+	<!-- Alternative voice or tone -->
+	The name <i>Shay</i> means a gift.
+Using i for Icons
+Underlining Text
+Striking Text
+	<!-- Deleted from the document -->
+	I am an avid cyclist, <del cite="http://shayhowe.com" datetime="2012-07-01">skateboarder</del> and designer.
+
+	<!-- No longer accurate or relevant -->
+	<s>$24.99</s> $19.99
+Highlighting Text
+	<!-- Highlighted for reference purposes -->
+	Search results for <mark>'chicago'</mark>.
+Abbreviations
+	<abbr title="HyperText Markup Language">HTML</abbr>
+	<abbr title="Cascading Style Sheets">CSS</abbr>
+Sub & Superscripts
+	<!-- Subscript -->
+	H<sub>2</sub>O
+
+	<!-- Superscripts -->
+	1<sup>st</sup> Place
+Meter & Progress*
+	<!-- Meter -->
+	<meter value="7" max="10">7 stars</meter>
+	<meter value="47" min="0" max="105" low="5" high="65" optimum="45">The car is moving at a decent average mile per hour.</meter>
+
+	<!-- Progress -->
+	You are <progress value="50" max="100">50%</progress> complete.
+	<progress value="50" min="0" max="100">Hold tight, you&#8217;re getting there.</progress>
+Time & Address
+	<!-- Time -->
+	<time>2011-08-24</time>
+	<time datetime="2011-08-24" pubdate>August 24th, 2011</time>
+	<time datetime="15:00">3pm</time>
+	<time datetime="2011-08-24T15:00">August 24th, 2011 at 3pm</time>
+
+	<!-- Address -->
+	<address>
+	  <strong>Shay Howe</strong><br>
+	  <a href="http://learn.shayhowe.com">http://learn.shayhowe.com</a><br>
+	  <a href="mailto:hello@awesome.com">hello@awesome.com</a><br>
+	  600 W. Chicago Ave.<br>
+	  Suite 620<br>
+	  Chicago, IL 60654<br>
+	  USA  
+	</address>
+Presenting Code
+	<!-- Inline code samples -->
+	Use the <code>article</code> element.
+
+	<!-- Larger, block level code snippets -->
+	<pre><code>body {
+	  color: #666;
+	  font: 14px/20px Arial, sans-serif;
+	}</code></pre>
+Line & Word Breaks
+	<!-- Line break -->
+	600 W. Chicago Ave.<br>
+	Chicago, IL 60654<br>
+	USA
+
+	<!-- Word break -->
+	http://shay<wbr>howe.com
+Side Comments
+	<!-- Side comments or small print -->
+	<small>&copy; 2012 Shay Howe</small>
+Citations & Quotes
+Hyperlink Attributes
+Download Attribute
+	<!-- Boolean -->
+	<a href="twitter-logo.png" download>Twitter Logo</a>
+
+	<!-- With a value -->
+	<a href="twitter-logo.png" download="Logo">Twitter Logo</a>
+Relationship Attribute
+	<a href="legal.html" rel="copyright">Terms of Use</a>
+	<a href="toc.html" rel="contents">Table of Contents</a>
+	alternate author bookmark help license next nofollow noreferrer prefetch prev search tag
+Microdata	
+Microdata vs. Microformats vs. RDFa
+Outlining Microdata
+	<section itemscope itemtype="http://schema.org/Person">
+	  ...
+	</section>
+	<section itemscope itemtype="http://schema.org/Person">
+	  <h1 itemprop="name">Shay Howe</h1>
+	</section>
+	<meta>	content attribute
+	<audio>, <embed>, <iframe>, <img>, <source>, <video>	src attribute
+	<a>, <area>, <link>	href attribute
+	<object>	data attribute
+	<time>	datetime attribute
+Person Microdata*
+Event Microdata*
+WAI-ARIA
+Roles
+Document Structure Roles
+	article columnheader definition directory document group heading img list listitem math note presentation region row rowheader separator toolbar
+Landmark Roles
+	application banner complementary contentinfo form main navigation search	
+States & Properties
+
+
+

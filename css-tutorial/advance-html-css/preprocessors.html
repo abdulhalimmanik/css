@@ -1,0 +1,251 @@
+Haml
+	installation
+	gem install haml
+	haml index.haml index.html
+	Doctype
+	!!! 5
+	Declaring Elements
+	%body
+	  %header
+	    %h1 Hello World
+	  %section
+	    %p Lorem ipsum dolor sit amet.
+	Attributes
+	%img{:src => "shay.jpg", :alt => "Shay Howe"}
+	%img{src: "shay.jpg", alt: "Shay Howe"}
+	%img(src="shay.jpg" alt="Shay Howe")
+	Classes &amp; IDs
+	%section.feature
+	%section.feature.special
+	%section#hello
+	%section#hello.feature(role="region")
+	.awesome
+	.awesome.lesson
+	#getting-started.lesson
+	Boolean Attributes
+	%input{:type => "checkbox", :checked => true}
+	%input(type="checkbox" checked=true)
+	%input(type="checkbox" checked)
+	Escaping Text
+	.author
+	  = @author
+	  \= @author
+	Text Escaping Alternatives
+	%p
+	  Shay is
+	  = succeed "." do
+	    %a{:href => "#"} awesome
+	Comments
+	%div
+	  / Commented line
+	  Actual line
+
+	/
+	  %div
+	    Commented block
+	Conditional Comments
+	/[if lt IE 9]
+	  %script{:src  => "html5shiv.js"}
+  	Silent Comments
+  	%div
+	  -# Removed line
+	  Actual line
+	Common Filters
+	:cdata :coffee :css :erb :escaped :javascript :less :markdown :maruku :plain :preserve :ruby :sass :scss :textile
+	Ruby Interpolation
+	%div{:class => "student-#{@student.name}"}
+
+
+
+
+SCSS &amp; Sass
+	Installation
+	gem install sass	
+	sass styles.sass styles.css
+	sass --watch styles.sass:styles.css
+	sass --watch assets/sass:public/css
+	Converting Files from SCSS to Sass &amp; Vice Versa
+	sass-convert styles.sass styles.scss	
+	sass-convert styles.scss styles.sass
+	Syntax
+	SCSS
+	.new {
+	  color: #ff7b29;
+	  font-weight: bold;
+	  span {
+	    text-transform: uppercase;
+	  }
+	}
+	Sass
+	.new
+	  color: #ff7b29
+	  font-weight: bold
+	  span
+	    text-transform: uppercase
+	Nesting
+	.portfolio
+	  border: 1px solid #9799a7
+	  ul
+	    list-style: none
+	  li
+	    float: left
+	Nesting Properties
+	div
+	  font:
+	    family: Baskerville, Palatino, serif
+	    style: italic
+	    weight: normal
+	Nested Media Queries
+	.container
+	  width: 960px
+	  @media screen and (max-width: 960px)
+	    width: 100%
+	Parent Selector
+	a
+	  color: #0087cc
+	  &:hover
+	    color: #ff7b29
+	Parent Key Selector
+	.btn
+	  background: linear-gradient(#fff, #9799a7)
+	  .no-cssgradients &
+	    background: url("gradient.png") 0 0 repeat-x
+	Comments
+	/* Normal comment */
+	div
+	  background: #333
+	// Omitted comment
+	strong
+	  display: block
+	Variables
+	$font-base: 1em
+	$serif: "Helvetica Neue", Arial, "Lucida Grande", sans-serif
+
+	p
+	  font: $font-base $serif
+	Variable Interpolation
+	$location: chicago
+	$offset: left
+
+	.#{$location}
+	  #{$offset}: 20px
+	Calculations
+	width: 40px + 6
+	width: 40px - 6
+	width: 40px * 6
+	width: 40px % 6
+	Division
+	width: 100px / 10
+	width: (100px / 10)
+	width: (100px / 10px)
+	$width: 100px
+	width: $width / 10
+	width: 5px - 100px / 10
+	Detailed Math
+	$grid: 16
+	$column: 40px
+	$gutter: 20px
+	$container: ($column * $grid) + ($gutter * $grid)
+
+	width: $container
+	Number Functions
+	percentage() round() ceil() floor() abs()
+	Color
+	color: rgba(#8ec63f, .25)
+
+	$green: #8ec63f
+	color: rgba($green, .25)
+	Color Operations
+	color: #8ec63f + #666
+	color: #8ec63f * 2
+	color: rgba(142, 198, 63, .75) / rgba(255, 255, 255, .75)
+	Color Alterations
+	invert() complement() mix() grayscale()
+	HSLa Color Alterations
+	lighten() darken() saturate() desaturate() adjust-hue() fade-in() fade-out()
+	Color Manipulation
+	color: change-color(#8ec63f, $red: 60, $green: 255)
+	color: adjust-color(#8ec63f, $hue: 300, $lightness: 50%)
+	color: scale-color(#8ec63f, $lightness: 25%, $alpha: 30%)
+	Extends
+	.alert
+	  border-radius: 10px
+	  padding: 10px 20px
+
+	.alert-error
+	  @extend .alert
+	  background: #f2dede
+	  color: #b94a48
+	Placeholder Selector Extend
+	%alert
+	  border-radius: 10px
+	  padding: 10px 20px
+
+	.alert-error
+	  @extend %alert
+	  background: #f2dede
+	  color: #b94a48
+	Element Selector Extend
+	h2
+	  color: #9c6
+	  span
+	    text-decoration: underline
+
+	.sub-heading
+	  @extend h2
+	Mixins
+	@mixin btn($color, $color-hover)
+	  color: $color
+	  &:hover
+	    color: $color-hover
+
+	.btn
+	  +btn($color: #fff, $color-hover: #9799a7)
+	Default Arguments
+	@mixin btn($color: #fff, $color-hover: #9799a7)
+	  color: $color
+	  &:hover
+	    color: $color-hover
+
+	.btn
+	  +btn($color-hover: #9799a7)
+	Variable Arguments
+	@mixin box-shadow($shadow...)
+	  -webkit-box-shadow: $shadow
+	  -moz-box-shadow: $shadow
+	  box-shadow: $shadow
+
+	.shadows
+	  +box-shadow(0 1px 2px #cecfd5, inset 0 0 5px #cecfd5)
+	Imports	  
+	@import "normalize"
+	@import "grid", "typography"
+	Loops &amp; Conditionals
+	Operators
+	< > == <= >= !=
+	If Function
+	$shay: awesome
+
+	.shay
+	  @if $shay == awesome
+	    background: #ff7b29
+	  @else if $shay == cool
+	    background: #0087cc
+	  @else
+	    background: #333
+	For Loop
+	@for $col from 1 to 6
+	  .col-#{$col}
+	    width: 40px * $col
+    Each Loop
+    @each $class in uxd, rails, html, css
+	  .#{$class}-logo
+	    background: url("/img/#{$class}.jpg")
+	While Loop
+	$heading: 1
+	@while $heading <= 6
+	  h#{$heading}
+	    font-size: 2em - ($heading * .25em)
+	  $heading: $heading + 1
+
+
