@@ -5,64 +5,85 @@ A
 ::before			div::before {content: "hi";}
 :active				a:active{ top: 1px;}					  		
 adjacent shibling		p+p { margin: 0; }										select any tag that is directly after any tag
-[attribute]			a[href="https://www.css-tricks.com"]					select only exact href value
-					.gallery img[alt*="art"]{outline: 5px solid #E18728;}    the word art, as whole or partial word					
-					.gallery2 img[alt~="art"] { outline: 5px solid #E18728;}	only value or in space-separated list
-					.gallery3 img[alt^="art"] { outline: 5px solid #E18728;}	alt attribute starts with the value "art"
-					li[data-years|="1900"] { color: red;}						data-years attribute starts with 1900
-					a[href$="pdf"]:after { 									/* href attribute ends with pdf */
-					content: url(https://s3-us-west-2.amazonaws.com/s.
-					cdpn.io/652/pdficon_small.png);
-					padding-left: .3em;
-					}
+[attribute]			a[href="https://www.css-tricks.com"]					
+				//select only exact href value
+				.gallery img[alt*="art"]{outline: 5px solid #E18728;}    
+				//the word art, as whole or partial word					
+				.gallery2 img[alt~="art"] { outline: 5px solid #E18728;}	
+				//only value or in space-separated list
+				.gallery3 img[alt^="art"] { outline: 5px solid #E18728;}	
+				//alt attribute starts with the value "art"
+				li[data-years|="1900"] { color: red;}						
+				//data-years attribute starts with 1900
+				a[href$="pdf"]:after { 									
+				/* href attribute ends with pdf */
+				content: url(https://s3-us-west-2.amazonaws.com/s.
+				cdpn.io/652/pdficon_small.png);
+				padding-left: .3em;
+				}
 					
 B	
-:blank				p:blank{ display: none;}								:blank will select elements that contain nothing at all
+:blank				p:blank{ display: none;}								
+				//blank will select elements that contain nothing at all
 
 C
 :checked			input[type=checkbox]:checked + label {
-					  color: #f00;
-					  font-style: normal;
-					}
-child					ol > li { color: red;}										
-class					.big-button { font-size: 60px;}
+				  color: #f00;
+				  font-style: normal;
+				}
+child				ol > li { color: red;}										
+class				.big-button { font-size: 60px;}
 
 D
 :default			input[type="radio"]:default + label:after {
-					   content: ' (default)';
-					   color: #999;
-					   font-style: italic;
-					}
+				   content: ' (default)';
+				   color: #999;
+				   font-style: italic;
+				}
 :disabled			input:disabled { background: url('img.jpg') repeat;}					
 descendant 			ul li {  }													any selector without whitespace between two selectors
 
 E 
-:empty 				div:empty{ display:none;}								select element that contain either nothing/html comment
-:enabled			input:enabled + label { color: #333;font-style: italic;} 	you can select/enter data/focus/click
+:empty 				div:empty{ display:none;}								
+				//select element that contain either nothing/html comment
+:enabled			input:enabled + label { color: #333;font-style: italic;} 	
+				//you can select/enter data/focus/click
 
 F
-::first-letter 		p::first-letter { font-weight: bold; color: red;}  		style the first letter in an element
-::first-line 		p:first-line { color: deepskyblue;}						styles the first line of an element
-:first-child 		p:first-child { font-size: 1.5em;}						try to match the immediate first child of parent element
-:first-of-type 		p:first-of-type { font-size: 1.25em;}					target the first occourance of an element
-:focus				textarea:focus { background: pink;}						currently targeted by keyboard/activated by the mouse
+::first-letter 			p::first-letter { font-weight: bold; color: red;}  		
+				style the first letter in an element
+::first-line 			p:first-line { color: deepskyblue;}						
+				styles the first line of an element
+:first-child 			p:first-child { font-size: 1.5em;}						
+				try to match the immediate first child of parent element
+:first-of-type 			p:first-of-type { font-size: 1.25em;}					
+				target the first occourance of an element
+:focus				textarea:focus { background: pink;}						
+				currently targeted by keyboard/activated by the mouse
 
 G
-general shibling 		img ~ p { background-color: #FEF0B6;padding: 5px;} 		This selects the elements at the same hirearcy label
+general shibling 		img ~ p { background-color: #FEF0B6;padding: 5px;} 		
+				//This selects the elements at the same hirearcy label
 
 H
-hover 				a:hover{ color: green;}									selects elements when the mouse cursor is current over them
+hover 				a:hover{ color: green;}									
+				//selects elements when the mouse cursor is current over them
 
 I
-:in-range 			input:in-range { border: 5px solid green;}				matches input elements when their value is within the range
+:in-range 			input:in-range { border: 5px solid green;}				
+				//matches input elements when their value is within the range
 :invalid			input:invalid { background: hsla(0, 90%, 70%, 1);}
-id 					#header { background: #eee;}								this is the ID selector 
+id 				#header { background: #eee;}								
+				//this is the ID selector 
 
 L
 :lang()				:lang(en) q { quotes: '“' '”'; }
-:last-child 		p:last-child { font-size: 0.75em;}  						will only try to match the very last child of a parent element
-:last-of-type		p:last-of-type { font-size: 0.75em;}						target the last occurence of an element within its container
-:link 				a:link { color: aquamarine;}								targets all unvisited links
+:last-child 			p:last-child { font-size: 0.75em;}  						
+				will only try to match the very last child of a parent element
+:last-of-type			p:last-of-type { font-size: 0.75em;}						
+				target the last occurence of an element within its container
+:link 				a:link { color: aquamarine;}								
+				targets all unvisited links
 
 M
 ::marker			p.note {  counter-increment: note-counter;}
@@ -74,37 +95,44 @@ M
 					color: #BADA55;}
 					
 N					
-:not				li:not(.different) { font-size: 3em;}						The :not(X) property in CSS is a negation pseudo class
+:not				li:not(.different) { font-size: 3em;}						
+				//The :not(X) property in CSS is a negation pseudo class
 :nth-child 			.module:nth-child(4n) { margin-right: 0;}
-:nth-last-child		li:nth-last-child(2) { background: lightslategrey;}		select one or more elements
-:nth-last-of-type	li:nth-last-of-type(2) { background: lightslategrey;}
-:nth-of-type		li:nth-of-type(2n) { background: lightslategrey;}
+:nth-last-child			li:nth-last-child(2) { background: lightslategrey;}		
+				//select one or more elements
+:nth-last-of-type		li:nth-last-of-type(2) { background: lightslategrey;}
+:nth-of-type		l	i:nth-of-type(2n) { background: lightslategrey;}
 
 O
-:only-child 			p:only-child { color:red;}								whose parent element has no other element children
-:only-of-type		p:only-of-type { color: red;}
+:only-child 			p:only-child { color:red;}								
+				//whose parent element has no other element children
+:only-of-type			p:only-of-type { color: red;}
 :optional 			input[type=text]:optional { border: 1px solid #eee;}
-:out-of-range		input:out-of-range { border: 5px solid red;}
+:out-of-range			input:out-of-range { border: 5px solid red;}
 
 P
-::placeholder		::-webkit-input-placeholder { color: orange;}
-:placeholder-shown 	input:placeholder-shown { border: 5px solid red;}
+::placeholder			::-webkit-input-placeholder { color: orange;}
+:placeholder-shown 		input:placeholder-shown { border: 5px solid red;}
 
 R
-:read-only			input:read-only{ cursor: not-allowed;}					any element that is not writeable
+:read-only			input:read-only{ cursor: not-allowed;}					
+				//any element that is not writeable
 :read-write			:read-write{ background: white; cursor: text;}			
 :required			:required { background: red;}
-:root				:root { background-color: cornflowerblue;}				target the heighest level element in the DOM
+:root				:root { background-color: cornflowerblue;}				
+				//target the heighest level element in the DOM
 
 S
 ::selection			p::selection { color: red; }								
 
 T
 :target				:target { background: yellow;}							
-type 					p{margin: 0 0 1em 0;}									element type selector
+type 				p{margin: 0 0 1em 0;}									
+				element type selector
 
 U
-universal selector(*)	* { margin: 0; padding: 0;}								asteric caracter
+universal selector(*)		* { margin: 0; padding: 0;}				
+				asteric caracter
 
 V
 :valid				input:valid { background: hsla(100, 90%, 70%, 1);}		
@@ -123,81 +151,80 @@ enable
 all animation flex 
 
 A
-align-content 			.flex-start{ align-content: flex-start | flex-end |		/* aligns individual items within the main-axis*/
-						center | space-between | space-around | stretch;}
-align-items				.flex-start{align-items: flex-start | flex-end |		/* laid the cross axis on the current line */
-						center | baseline | stretch;}					
-align-self				.flex-start{ align-self:auto | flex-start | flex-end	/*  override the align-items value */
-						| center| baseline | stretch;}					
-all 					.module { all: initial | inherit | unset;}
-animation				.element{  animation: pulse 5s infinite;
- 							   animation-name: stretch;
-   							   animation-duration: 1.5s; 
-							   animation-timing-function: ease-out; 
-							   animation-delay: 0;
-							   animation-direction: alternate;
-							   animation-iteration-count: infinite;
-							   animation-fill-mode: none;
- 							   animation-play-state: running; 	
-						}
-						@keyframes pulse {
-						  0% {
-							background-color: #001F3F;
-						  }
-						  100% {
-							background-color: #FF4136;
-						  }
-						}
+align-content 			.flex-start{ align-content: flex-start | flex-end |
+				center | space-between | space-around | stretch;}
+align-items			.flex-start{align-items: flex-start | flex-end | center | baseline | stretch;}					
+align-self			.flex-start{ align-self:auto | flex-start | flex-end | center| baseline | stretch;}					
+all 				.module { all: initial | inherit | unset;}
+animation			.element{  animation: pulse 5s infinite;
+				   animation-name: stretch;
+				   animation-duration: 1.5s; 
+				   animation-timing-function: ease-out; 
+				   animation-delay: 0;
+				   animation-direction: alternate;
+				   animation-iteration-count: infinite;
+				   animation-fill-mode: none;
+				   animation-play-state: running; 	
+				}
+				@keyframes pulse {
+				  0% {
+					background-color: #001F3F;
+				  }
+				  100% {
+					background-color: #FF4136;
+				  }
+				}
 appearence			input[type=search] { -webkit-appearance: none;}
 
 B
-backface-visibility 		.flip{backface-visibility: hidden;}						front of an screen no longer faces the screen
-background			body {													/* control the background of an element */
-						  background:
-							 url(sweettexture.jpg)    						/* image */
-							 top center / 200px 200px 						/* position / size */
-							 no-repeat               				    	/* repeat */
-							 fixed                  						/* attachment */
-							 padding-box              						/* origin */
-							 content-box           							/* clip */
-							 red;                     						/* color */
-						}
-					body{ background: url(sweettexture.jpg), 				/* multiple background */
+backface-visibility 		.flip{backface-visibility: hidden;}						
+				//front of an screen no longer faces the screen
+	background			body {													
+				  background:
+					 url(sweettexture.jpg)    						
+					 top center / 200px 200px 						
+					 no-repeat               				    	
+					 fixed                  						
+					 padding-box              						
+					 content-box           							
+					 red;                     						
+				}
+				body{ background: url(sweettexture.jpg), 				
 						url(texture2.jpg) black;}	
-background-attachment 	.scroll{background-attachment: scroll | fixed | 		/*how to move the background relative to viewport*/
+background-attachment 		.scroll{background-attachment: scroll | fixed | 		
 					local;}						
-background-blend-mode   .container { background-image: url('image.jpg');			/* how bg shpuld blend with its background color*/
+background-blend-mode   	.container { background-image: url('image.jpg');			
 					background-color: red;background-blend-mode: screen;}					
-background-clip		.frame { background-clip: boredr-box | padding-box		/* how far a background image or color extends */
+background-clip			.frame { background-clip: boredr-box | padding-box		
 						content-box | inherit | initial; }
-background-color		html { background-color: #82a43a; }						applies solid color as background on an element
+background-color		html { background-color: #82a43a; }						
 background-image		body { background: url(sweettexture.jpg) | 
 					linear-gradient(black, white);}
-background-origin 		.bg-origin{background-origin: border-box |				/* where to paint the background */ 
+background-origin 		.bg-origin{background-origin: border-box |				 
 					padding-box | content-box | inherit;}					
-background-position 	html { background-position: 100px 5px | 100% 0% |		/* horizontal position vertical position */
+background-position 		html { background-position: 100px 5px | 100% 0% |		
 						right top; }						
-background-repeat 		html { background-repeat: repeat | repeat-x |			/* how it will repeat */
+background-repeat 		html { background-repeat: repeat | repeat-x |			
 						repeat-y | no-repeat; }						
-background-size		html{ background-size: cover | contain;}
-bleed 				@page :left { bleed: 10pt;}								specifying space outside of the page box boundary
+background-size			html{ background-size: cover | contain;}
+bleed 				@page :left { bleed: 10pt;}								
 border 				.border{ border: 3px solid red;}
 border-collapse			table { border-collapse: collapse | seperate;} 
-border-image 			.module { border-image: url(border.png) 25 25 round;}   use an image or CSS gradient as the border of an element
+border-image 			.module { border-image: url(border.png) 25 25 round;}   
 border-radius			.round { border-radius: 5px 10px 15px 20px;}
 bottom 				div{ position: relative; bottom: 50px;}					
-box-decoration-break 	.module { box-decoration-break: clone;}
+box-decoration-break 		.module { box-decoration-break: clone;}
 box-shadow			.shadow{ box-shadow: 3px 3px 5px 6px #ccc |
 						 inset 0 0 10px #000000;}
-box-sizing				.module { box-sizing: border-box;}						how the box model is handled
+box-sizing				.module { box-sizing: border-box;}						
 break-inside			li{ break-inside: avoid;}
 
 C
-clear					#footer{ clear: both;}
-clip-path*				.clip-me{clip-path: inset(10px 20px 30px 40px);}						 
-color					p{ color: aqua | #0ff |  rgb(0, 255, 255) |				/* sets the color of text and text decorations */
+clear				#footer{ clear: both;}
+clip-path*			.clip-me{clip-path: inset(10px 20px 30px 40px);}						 
+color				p{ color: aqua | #0ff |  rgb(0, 255, 255) |				
 						hsla(180, 100%, 50%, .5);}
-column-counter		.lead{ column-count: 3;}	
+column-counter			.lead{ column-count: 3;}	
 column-fill 			ul{ column-fill: balance | auto;}
 column-gap			.example{ column-gap: 5em;}
 column-rule			.example{ column-rule: 1px solid red;}
@@ -206,73 +233,73 @@ column-width			.example{ column-width: 120px;}
 columns				.intro{ columns: 300px 2;}
 content* 				.name::before { content: "Name: ";}
 counter-increment		body {
-					  counter-reset: my-awesome-counter;
-					}
-					section {
-					  counter-increment: my-awesome-counter;
-					}
-					section:before {
-					  content: counter(my-awesome-counter);
-					}
+				  counter-reset: my-awesome-counter;
+				}
+				section {
+				  counter-increment: my-awesome-counter;
+				}
+				section:before {
+				  content: counter(my-awesome-counter);
+				}
 counter-reset			body {
 					  counter-reset: my-awesome-counter;
 					}
 cursor				.auto{ cursor: auto | default | none| context-menu;}
 
 D 
-direction 				.main-content { direction: rtl;}
+direction 			.main-content { direction: rtl;}
 display
 
 E
-empty-cells			table{ empty-cells: show | hide;}												selects empty table cells
+empty-cells			table{ empty-cells: show | hide;}												
 
 F
-fill					.eyeball { fill: red;}														fill the color of a SVG shape
-filter					.filter{ filter: blur(20%) | brightness() | contrast() | 
+fill				.eyeball { fill: red;}														
+filter				.filter{ filter: blur(20%) | brightness() | contrast() | 
 						dropshadow() | grayscale() | hue-rotate() | invert() | 
 						opacity() | saturate() | sepia() | url() | custom();}
-flex *					.flex-item{ flex-item: 1 100%;}
-flex-basis	*			.flex-item { flex-basis: 100px;}                                            /*specifies the initial size */
-flex-direction			.flex{ flex-direction: row | row-reverse | column | column-reverse}			define the direction flex item
-flex-flow				.flex-container { flex-flow: row wrap;}										
-flex-grow				.flex-item:nth-of-type(3) { flex-grow: 2; }
+flex *				.flex-item{ flex-item: 1 100%;}
+flex-basis	*		.flex-item { flex-basis: 100px;}                                            
+flex-direction			.flex{ flex-direction: row | row-reverse | column | column-reverse}			
+flex-flow			.flex-container { flex-flow: row wrap;}										
+flex-grow			.flex-item:nth-of-type(3) { flex-grow: 2; }
 flex-shrink			.flex-item { flex-shrink: 2;}				
-flex-wrap				.flex-item{ flex-wrap: nowrap | wrap | wrap-reverse;}
-float					.element{ float: left | right | none;}
-font					body { font: normal small-caps normal 16px/1.4 Georgia;}
+flex-wrap			.flex-item{ flex-wrap: nowrap | wrap | wrap-reverse;}
+float				.element{ float: left | right | none;}
+font				body { font: normal small-caps normal 16px/1.4 Georgia;}
 font-family			code {font-family: "Times New Roman", Georgia, serif;}
-font-feature-settings	span {
-						  transition: color .5s linear;
-						}
-					.smcp {
-					  span {
-						font-feature-settings: "smcp" 1;
-					  }
-					  span {
-						color: lighten(red, 10);
-					  }
-					}
-font-size				.element{ font-size: xx-small | x-small | small | medium | large |
+font-feature-settings		span {
+				  transition: color .5s linear;
+				}
+				.smcp {
+				  span {
+					font-feature-settings: "smcp" 1;
+				  }
+				  span {
+					color: lighten(red, 10);
+				  }
+				}
+font-size			.element{ font-size: xx-small | x-small | small | medium | large |
 						x-large | xx-large| mm | cm | im |  pt | pc | larger | smaller |
 						100% | 1em | 1.5rem | 20ex | 100vw | 100vh | 24ch;}
 font-size-adjust		.element{ font-size-adjust: .5;}
-font-stretch			p{ font-stretch: ultra-condensed | extra-expanded | semi-condensed |	/* selects face from font */
+font-stretch			p{ font-stretch: ultra-condensed | extra-expanded | semi-condensed |	
 						condensed | normal | ultra-expanded | extra-expanded |
 						semi-expanded | expanded;}
-font-style				p{ font-face: normal | italic | oblique;}								allows you to make text appear italicized 	
-font-variant			p{ font-variant: normal | small-caps;}									change the targeted text to small caps
-font-weight			p{ font-weight: normal | bold | bolder | lighter;}						sets the weight,or thickness,of a 
+font-style				p{ font-face: normal | italic | oblique;}									
+font-variant			p{ font-variant: normal | small-caps;}									
+font-weight			p{ font-weight: normal | bold | bolder | lighter;}						 
 
 G
-grid-row/grid-column 	.element { grid-row | grid-column: <integer> [DEFAULT: auto];}
-grid-row/column-align	.grid { grid-row-align: start | end | center |
+grid-row/grid-column 		.element { grid-row | grid-column: <integer> [DEFAULT: auto];}
+grid-row/column-align		.grid { grid-row-align: start | end | center |
 						stretch [DEFAULT: stretch];}
-grid-row/column-span	.element { grid-row-span | grid-column-span: <integer> [DEFAULT: 1]}
-grid-rows / grid-columns   .grid {
-						display: grid;
-						grid-columns: auto 100px 1fr 2fr;
-						grid-rows: 50px 5em auto;
-					}
+grid-row/column-span		.element { grid-row-span | grid-column-span: <integer> [DEFAULT: 1]}
+grid-rows / grid-columns   	.grid {
+					display: grid;
+					grid-columns: auto 100px 1fr 2fr;
+					grid-rows: 50px 5em auto;
+				}
 
 H
 hanging-punctuation		blockquote p{ hanging-punctuation: none | [ first || [ force-end | 
@@ -281,18 +308,18 @@ height 				.wrap{ height: auto | 120px | 10em | 0 | 75% | inherit;}
 hypens				p { hyphens: none | manual | auto;}	
 
 I 
-image-rendering		img { image-rendering: auto | crisp-edges | pixelated;}	
-isolation				.module { isolation: isolate;}
+image-rendering			img { image-rendering: auto | crisp-edges | pixelated;}	
+isolation			.module { isolation: isolate;}
 
 J
 justify-content			.flex-item{ justify-content: flex-start | flex-end | center | 
 						space-between | space-around;}				
 						
 L
-left					div{ left: 20px;}															goes hand in hand with positioning
-letter-spacing			p{ letter-spacing: 0.0625em;}												the amount of space between each letter
-line-height			p{ line-height: 20px | none | normal;}										the amount of space above and below
-list-style				ul { list-style-type: square; list-style-position: outside; 
+left				div{ left: 20px;}															
+letter-spacing			p{ letter-spacing: 0.0625em;}												
+line-height			p{ line-height: 20px | none | normal;}										
+list-style			ul { list-style-type: square; list-style-position: outside; 
 						list-style-image: none;}
 						
 M
@@ -301,104 +328,111 @@ max-height			.wrapper{ max-height: 20px;}
 max-width			.wrapper{ max-width: 20em;}
 min-height
 min-width
-mix-blend-mood		.blend { mix-blend-mode: color | color-burn | color-dodge |
-						darken | difference | exclusion | hard-light | hue | inherit |
-						initial | lighten | luminosity | normal | overlay | saturation | 
-						screen | softlight | unset;}						
+mix-blend-mood			.blend { mix-blend-mode: color | color-burn | color-dodge |
+					darken | difference | exclusion | hard-light | hue | inherit |
+					initial | lighten | luminosity | normal | overlay | saturation | 
+					screen | softlight | unset;
+				}						
 motion-offset			.marker{ motion-offset: 0%;}
 motion-path			.marker{ motion-path: 
 						path('M 5 5 m -4, 0 a 4,4 0 1,0 8,0 a 4,4 0 1,0 -8,0');}	
-motion-rotation		.marker{ motion-rotation: auto;}
+motion-rotation			.marker{ motion-rotation: auto;}
 
 O
-object-fit				.object-fit_fill { object-fit: fill | contain | cover | 
+object-fit			.object-fit_fill { object-fit: fill | contain | cover | 
 						none | scale-down;}				
-object-position			img{ object-position: 50% 50%; }												/* fit X/Y */
-opaity				div{ opacity: 0.5;}															0 invisible, 1 visible
-order				.flex-item:nth-of-type(1) { order: 3; }										order property change ordering
-orphans				@media print { p { orphans: 3;  }}											p that is left behind on the old page
-outline				a:active { outline: 1px dashed red;}											draw a line around outside of an element
-overflow				div { overflow:  visible | hidden | scroll | auto | inherit;}					
+object-position			img{ object-position: 50% 50%; }												
+opaity				div{ opacity: 0.5;}															
+order				.flex-item:nth-of-type(1) { order: 3; }										
+orphans				@media print { p { orphans: 3;  }}											
+outline				a:active { outline: 1px dashed red;}											
+overflow			div { overflow:  visible | hidden | scroll | auto | inherit;}					
 
 P
-padding 				.box{ padding: 20px;}														innermost portion of box model 
-page-break 			@media print { h2 { page-break-before: auto | always | 						/*how the document is */	
+padding 			.box{ padding: 20px;}														
+page-break 			@media print { h2 { page-break-before: auto | always | 						
 						avoid | left | right;}}	
-perspective			.wrapper { perspective: 1000px;}												gives an element 3D space
-perspective-origin		.cube { perspective-origin: top left; }										the origin for the perspective property 
+perspective			.wrapper { perspective: 1000px;}												
+perspective-origin		.cube { perspective-origin: top left; }										
 pointer-events 			.avoid-clicks { pointer-events: none;}
-position				.element{ position: relative; top: 20px;}									manipulates the location of an element
+position				.element{ position: relative; top: 20px;}									
 
 Q
 quotes 				q { quotes: "«" "»" "‹" "›";}												
 
 R
-resize 				.module { resize: both | horizontal | vertical | none;}						how an element can be resized	
-right 				.element{ position: absolute; right: 25px;}									nudge the element to the direction 
-
+resize 				.module { resize: both | horizontal | vertical | none;}						
+right 				.element{ position: absolute; right: 25px;}									
 S 
-scrollbar				body::-webkit-scrollbar {													/* custom scrollbar */	
-						width: 1em;
-					}
-					body::-webkit-scrollbar-track {
-						-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
-					}
-					body::-webkit-scrollbar-thumb {
-					  background-color: darkgrey;
-					  outline: 1px solid slategrey;
-					}	
-shape-outside			.element{shape-outside: circle(50%) | ellipse() | inset() | 				/* how content will wrap */
+scrollbar			body::-webkit-scrollbar {													
+					width: 1em;
+				}
+				body::-webkit-scrollbar-track {
+					-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+				}
+				body::-webkit-scrollbar-thumb {
+				  background-color: darkgrey;
+				  outline: 1px solid slategrey;
+				}	
+shape-outside			.element{shape-outside: circle(50%) | ellipse() | inset() | 				
 						polygon() | url() | initial | inherit;}					
-stroke				.stroke{ stroke: red;}														add a border
-stroke-dasharray		.module{ stroke-dasharray: 5;}												creating dashes in the stroke of SVG stroke-dashoffset	        .module{ stroke-dashoffset: 100;}											where the dash of stroke will begin stroke-linecap		    .module{ stroke-linecap: butt| square | round;}		   					  for setting the starting and ending points 
+stroke				.stroke{ stroke: red;}														
+stroke-dasharray		.module{ stroke-dasharray: 5;}													        
+				.module{ stroke-dashoffset: 100;}													   
+				.module{ stroke-linecap: butt| square | round;}	
 stroke-width			.module{ stroke-width: 2;}
 
 T
-tab-size				p.fourtabs { tab-size:4;}													adjust the amount of space 	
-text-align				p{ text-align: left | right | center | justify | inner;}					align the inner content of a block elem text-align-last			 .intro-graph {text-align-last: center;} 	   								 control the alignment of the last line text-decoration	     		h3{ text-decoration: none | underline | line-through | 						/* adds a line to s text*/
+tab-size			p.fourtabs { tab-size:4;}														
+text-align			p{ text-align: left | right | center | justify | inner;}								
+				.intro-graph {text-align-last: center;} 	   								    		
+				h3{ text-decoration: none | underline | line-through | 						
 						overline | inherit;}			  	
-text-decoration-color	a { text-decoration-color: #E18728;}											sets the color of text-decoration line
-text-decoration-line 		p { text-decoration-line: overline underline line-through;}					decorates text
-text-decoration-skip		a { text-decoration-skip: objects | none | spaces | ink |					/*where text-decoration break*/
+text-decoration-color		a { text-decoration-color: #E18728;}											
+text-decoration-line 		p { text-decoration-line: overline underline line-through;}					
+text-decoration-skip		a { text-decoration-skip: objects | none | spaces | ink |					
 						edges | box-decoration;}
-text-decoration-style	a { text-decoration-style: solid | double | dotted | 
+text-decoration-style		a { text-decoration-style: solid | double | dotted | 
 						dashed | wavy;}
-text-indent			p{ text-indent: 1.5em;}													    howmuch horizontal space should move text-overflow 		   .ellipsis { text-overflow: clip | ellipsis | inherit | initial;}		      where text is clipped text-rendering		   p.legibility { text-rendering: auto | optimizeSpeed |
+text-indent			p{ text-indent: 1.5em;}													    		  
+				.ellipsis { text-overflow: clip | ellipsis | inherit | initial;}		     		   
+				p.legibility { text-rendering: auto | optimizeSpeed |
 						optimizeLegibility | geometricPrecision;}
 text-shadow			p { text-shadow: 1px 1px 1px #000;}
 text-stroke			mark { -webkit-text-stroke: 2px red;}						
-text-transform 			p{ text-transform: lowercase | uppercase | capitalize |						/*controls text case and capi*/
+text-transform 			p{ text-transform: lowercase | uppercase | capitalize |						
 						none | inherit;}
-text-decoration-position    a { text-underline-position: under;}	
+text-decoration-position    	a { text-underline-position: under;}	
 top					div{ position: relative; top: 50px;}		
-transform				.element{ transform: scale(20) | skewX() | skewY() | translate() |			/*visually manipulate an elem*/
+transform				.element{ transform: scale(20) | skewX() | skewY() | translate() |			
 						rotate() | perspective();}			
-transform-origin		.box{ transform-origin: top left}											change the point of origin of transform
-transform-style 		.parent { transform-style: preserve-3d;}										children position
-transition				.example{ transition: background-color 500ms ease-out 1s;}					allows element to change values
-transition-delay 		.example{ transition-delay: 2s;}											length of time delay 
-transition-duration		.box{ transition-duration: 2s;}												time 4 transition btn 2 states
-transition-property		.example{ transition-property: color;}										what property to transition 
-transition-timing-function .example{ transition-timing-function: ease | linear | ease-in |
+transform-origin		.box{ transform-origin: top left}											
+transform-style 		.parent { transform-style: preserve-3d;}										
+transition				.example{ transition: background-color 500ms ease-out 1s;}					
+transition-delay 		.example{ transition-delay: 2s;}											
+transition-duration		.box{ transition-duration: 2s;}												
+transition-property		.example{ transition-property: color;}										
+transition-timing-function 	.example{ transition-timing-function: ease | linear | ease-in |
 						ease-out | ease-in-out | step-start | step-end;}
 						
 U
-unicode-bidi			.bilingual-excerpt { direction: rtl; unicode-bidi: embed;}					handle the rendering of bidirectional tex user-select			   .no-copy p{ user-select: none | all;}										  								
+unicode-bidi			.bilingual-excerpt { direction: rtl; unicode-bidi: embed;}								  
+				.no-copy p{ user-select: none | all;}										  								
 
 V
-vertical-align			.middle > *{ vertical-align: middle;}										how element set to next to each other
-visibility				p{ visibility: visible | hidden | collapse | inherit;}						
+vertical-align			.middle > *{ vertical-align: middle;}										
+visibility			p{ visibility: visible | hidden | collapse | inherit;}						
 
 W
-white-space			div{ white-space: normal;}													how text is handled on the element
-widows				@media print { p { widows: 3;}}												min no of line split on new page
-width				.wrap { width: 80%;}															the width of the element
-will-change			.element{ will-change: transform;} 											which property is about to be manipul
-word-break			p{ word-break: break-all;}													change line break
-word-spacing			p{ word-spacing: 2em;}														space between the words
+white-space			div{ white-space: normal;}													
+widows				@media print { p { widows: 3;}}												
+width				.wrap { width: 80%;}															
+will-change			.element{ will-change: transform;} 											
+word-break			p{ word-break: break-all;}												
+word-spacing			p{ word-spacing: 2em;}														
 
 Z
-z-index				div{ z-index: 1;}															vertical stacking order of elem
-zoom 				.zoom{ zoom: 150%;}															scale your content.
+z-index				div{ z-index: 1;}															
+zoom 				.zoom{ zoom: 150%;}															
 10 August 2016. Alhamdulillah.	
 		
